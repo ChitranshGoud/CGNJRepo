@@ -91,6 +91,10 @@
             box-shadow: 0 10px 20px rgba(74, 107, 255, 0.3);
         }
 
+
+
+
+
         .hero {
             padding: 30px 0;
             display: flex;
@@ -609,4 +613,5 @@
     text-align: center;
   }
 }
+
 
