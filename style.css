@@ -150,6 +150,21 @@
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
         }
 
+        .contact-hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center; /* Ensure vertical centering if needed */
+            min-width: 0; /* Prevents flex item from shrinking below min-content */
+        }
+
+        .contact-hero-image img {
+            max-width: 100%;
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            object-fit: contain; /* Ensures the entire image is visible */
+        }
         .download-stats {
             background-color: rgba(74, 107, 255, 0.1);
             padding: 10px 20px;
@@ -268,7 +283,7 @@
         }
 
         .made-in-india {
-            background: linear-gradient(45deg, #FF9933,  #FFFFFF, #138808);
+            background: linear-gradient(45deg, #138808 , #FFFFFF, #FF9933);
             padding: 50px 0;
             text-align: center;
             color: #000;
@@ -687,5 +702,15 @@ body {
         flex-direction: column;
         align-items: center;
       }
+    }
+
+    @media (max-width: 768px) {
+        .contact-hero-image {
+            flex: none; /* Disable flex grow/shrink if needed */
+            width: 100%; /* Force full width */
+        }
+        .contact-hero-image img {
+            max-width: 90%; /* Slightly smaller to ensure visibility */
+        }
     }
 
